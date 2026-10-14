@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+
+    <!-- tailwind -->
+    <script src="js/browser@4.js"></script>
+</head>
+
+<body class="bg-[#f5f8ff] min-h-screen flex items-center">
+
+  <main class="container mx-auto px-6 py-12">
+
+    <!-- start welcome section -->
+
+    <section id="welcome" class="grid md:grid-cols-2 gap-12 items-center">
+
+      <img src="imgs/1.jpg" alt="necklace" class="w-full max-w-md aspect-square object-cover">
+
+      <div>
+        <h1 class="text-4xl font-semibold mb-3">welcome</h1>
+        <p class="text-xl font-semibold text-gray-400 mb-5">We’re glad you’re here! Sign up to start</p>
+        <button onclick="showSignup()" class="w-full bg-[#0088ff] hover:bg-blue-600 text-white py-2 rounded-lg">Get Started</button>
+      </div>
+
+    </section>
+
+    <!-- end welcome section -->
+
+
+    <!-- start signup section -->
+
+    <section id="signup" class="grid hidden md:grid-cols-2 gap-12 items-center">
+
+      <img src="imgs/2.jpg" alt="necklace" class="w-full max-w-md aspect-square object-cover">
+
+      <div>
+        <h1 class="text-3xl font-semibold mb-2">Create Account</h1>
+        <p class="text-lg font-semibold text-gray-400 mb-4 max-w-xs">Go ahead and sign up, let everyone know how awesome you are!</p>
+
+        <form onsubmit="return validateValue()" class="flex flex-col gap-5" novalidate>
+
+          <div id="result" class="hidden bg-red-100 border border-red-300 text-red-500 text-center text-lg py-3 rounded-lg"></div>
+
+          <input id="user" type="text" placeholder="User Name" class="border border-gray-400 rounded px-3 py-2 outline-none focus:border-[#0088ff]">
+          <input id="email" type="email" placeholder="Email" class="border border-gray-400 rounded px-3 py-2 outline-none focus:border-[#0088ff]">
+          <input id="pass" type="password" placeholder="Password" class="border border-gray-400 rounded px-3 py-2 outline-none focus:border-[#0088ff]">
+          <input id="confirm" type="password" placeholder="Confirm Password" class="border border-gray-400 rounded px-3 py-2 outline-none focus:border-[#0088ff]">
+
+          <button type="submit" class="bg-[#0088ff] hover:bg-blue-600 text-white py-2 rounded-lg">Create New Account</button>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- end signup section -->
+
+
+    <!-- start success section -->
+
+    <section id="success" class="grid hidden md:grid-cols-2 gap-12 items-center">
+
+      <img src="imgs/3.jpg" alt="necklace" class="w-full max-w-md aspect-square object-cover">
+
+      <div>
+        <h1 class="text-3xl font-semibold mb-3">Successfully logged in</h1>
+        <p id="userEmail" class="font-semibold text-gray-400"></p>
+      </div>
+
+    </section>
+
+    <!-- end success section -->
+
+
+  </main>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
